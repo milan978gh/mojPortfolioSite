@@ -1,9 +1,129 @@
+$ff-primary: Georgia, serif;
+$ff-secondary: Tahoma, sans-serif;
 
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+body {
+	font-family: $ff-secondary;
+	background-color: #ddd;
+	scrollbar-width: none;
+}
+
+#hero {
+	background: url(../img/mainBg.jpg) center/cover no-repeat;
+	height: 95vh;
+
+	.header {
+		background-color: #00000080;
+		height: 6vh;
+
+		.inner-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 1200px;
+			height: 100%;
+			margin: 0 auto;
+
+			.logo {
+				img {
+					display: block;
+					height: 5vh;
+					margin: 2vw;
+				}
+			}
+			.nav {
+				ul {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					li {
+						padding: 0 2vw;
+
+						a {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	.hero-name {
+		background-color: #00000080;
+		color: #fff;
+		text-shadow: 2px 2px 3px black;
+		display: inline-block;
+		position: absolute;
+		top: 40%;
+		left: 30%;
+		padding: 0.5rem 1.5rem;
+		border-radius: 5px;
+
+		h1 {
+			font-family: $ff-primary;
+			font-size: 2.5rem;
+		}
+	}
+}
+#work {
+	height: 45vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.work-wrapper {
+		background-color: #fff;
+		box-shadow: 1px 1px 3px #444444, -1px -1px 3px #444444;
+		width: 90%;
+		max-width: 1200px;
+		height: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h1 {
+		}
+	}
+}
+#contact {
+	height: 45vh;
+	background-color: #111;
+
+	.contact-wrapper {
+		max-width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h1 {
+            animation: mailEntry 2s linear 0.5s;
+		}
+		@keyframes mailEntry {
+			0% {
+				transform: scale(1);
+				opacity: 0;
+			}
+			20% {
+				transform: scale(2);
+				opacity: .5;
+			}
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+	}
+}
+footer {
+	text-align: center;
+	padding: 5px 0;
 }
